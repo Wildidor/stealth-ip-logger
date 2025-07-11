@@ -13,7 +13,7 @@ def log_ip():
     with open("logs.txt", "a") as file:
         file.write(f"{timestamp} | IP: {ip} | Agent: {agent}\n")
 
-    image_path = os.path.join(os.path.dirname(__file__), 'shopping.jpg')
+    image_path = os.path.join(os.path.dirname(__file__), 'image.jpg')
     return send_file(image_path, mimetype='image/jpeg')
 
 @app.route('/logs')
